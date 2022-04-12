@@ -1,0 +1,129 @@
+{%- from 'header/macro.njk' import header %}
+{%- from 'footer/macro.njk' import footer %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'action-link/macro.njk' import actionLink %}
+{%- from 'breadcrumb/macro.njk' import breadcrumb %}
+{%- from 'contents-list/macro.njk' import contentsList %}
+{%- from 'details/macro.njk' import details %}
+{%- from 'header/macro.njk' import header %}
+{%- from 'hero/macro.njk' import hero %}
+{%- from 'footer/macro.njk' import footer %}
+{%- from 'do-dont-list/macro.njk' import list %}
+{%- from 'images/macro.njk' import image %}
+{%- from 'inset-text/macro.njk' import insetText %}
+{%- from 'pagination/macro.njk' import pagination %}
+{%- from 'skip-link/macro.njk' import skipLink %}
+{%- from 'tables/macro.njk' import table %}
+{%- from 'warning-callout/macro.njk' import warningCallout %}
+{%- from 'back-link/macro.njk' import backLink %}
+{%- from 'button/macro.njk' import button %}
+{%- from 'checkboxes/macro.njk' import checkboxes %}
+{%- from 'date-input/macro.njk' import dateInput %}
+{%- from 'error-message/macro.njk' import errorMessage %}
+{%- from 'error-summary/macro.njk' import errorSummary %}
+{%- from 'fieldset/macro.njk' import fieldset %}
+{%- from 'hint/macro.njk' import hint %}
+{%- from 'input/macro.njk' import input %}
+{%- from 'label/macro.njk' import label %}
+{%- from 'radios/macro.njk' import radios %}
+{%- from 'select/macro.njk' import select %}
+{%- from 'summary-list/macro.njk' import summaryList %}
+{%- from 'textarea/macro.njk' import textarea %}
+{%- from 'card/macro.njk' import card %}
+{% from 'tag/macro.njk' import tag %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the Department for Education.{% endif %}"/>
+    {%- block extraMeta %}{% endblock %}
+
+    <title>
+      {% if pageTitle %}{{ pageTitle }} - DfE User Centered Design{% else %}DfE User Centered Design{% endif %}
+    </title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="/js/main.min.js" defer></script>
+
+    <!-- Cookie consent -->
+    <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script>
+
+    <!-- Verify domain with Google -->
+    <meta name="google-site-verification" content=""/>
+    
+    <link rel="shortcut icon" href="https://www.gov.uk/assets/static/favicon-9ed7849c462c53aa2cdf1690eb257e801ecbf5696d1d0928868c5b032b4adb36.ico" type="image/x-icon">
+    <link rel="mask-icon" href="https://www.gov.uk/assets/static/govuk-mask-icon-a409a4db4a5e72c99ae3916653710064c43eb4be35821f79c07c5156e7dc5808.svg" color="#0b0c0c">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://www.gov.uk/assets/static/govuk-apple-touch-icon-180x180-026deaa34fa328ae5f1f519a37dbd15e6555c5086e1ba83986cd0827a7209902.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="https://www.gov.uk/assets/static/govuk-apple-touch-icon-167x167-a44a5b317f51a61950697fbe6c61ffe3b5acdd89de60ef70429daa32881d5279.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://www.gov.uk/assets/static/govuk-apple-touch-icon-152x152-828a839e5c83de19f98014eef54cec77aa11063a23ce321970d6f9310eeabb6c.png">
+    <link rel="apple-touch-icon" href="https://www.gov.uk/assets/static/govuk-apple-touch-icon-5f801db05920bd1eb2b27a7a90328599bb16b6344c3213795af0f20d3ca179b0.png">
+
+    <meta property="og:url" content="{{ BASE_URL }}"/>
+    <meta property="og:site_name" content="DFE User Centered Design"/>
+    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - DfE User Centered Design{% else %}DfE User Centered Design{% endif %}"/>
+    <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the Department for Education.{% endif %}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="en_GB"/>
+    <meta property="og:image" content="{% if BASE_URL %}{{ BASE_URL }}{% endif %}{% if pageSection %}/assets/open-graph_{{pageSection | lower | replace(" ", "_") | replace("'", "")}}.png{% else %}/assets/open-graph.png{% endif %}" />
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@dfe_digital">
+    <meta name="twitter:creator" content="@dfe_digital">
+    <meta name="twitter:image:alt" content="DfE user centered design">
+
+  </head>
+
+  <body>
+    <script>document.body.className = ((document.body.className) ? document.body.className + ' js-enabled' : 'js-enabled');</script>
+
+    <a class="nhsuk-skip-link" href="#maincontent">Skip to main content</a>
+
+    {% include "includes/_header-prototype.njk" %}
+
+    {% block breadcrumb %}
+      {{ breadcrumb({
+        href: "/",
+        text: "Home",
+        classes: "app-breadcrumb"
+      }) }}
+    {% endblock %}
+
+    {% block outerBody %}{% endblock %}
+
+    {%- if beta %}
+    {% include "includes/_beta-banner.njk" %}
+    {% endif %}
+
+    {% if pageLayout != "Homepage" %}
+    <div class="nhsuk-width-container app-width-container">
+      <main class="nhsuk-main-wrapper app-main-wrapper" id="maincontent" role="main">
+        {% block body %}{% endblock %}
+      </main>
+
+    </div>
+
+     
+      </main>
+
+    </div>
+
+    {% endif %}
+
+    {% include "includes/_footer.njk" %}
+
+    {% block pageScripts %}{% endblock %}
+
+    <script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "//cdn.mouseflow.com/projects/3aae3cce-1697-4f37-8054-8ee599a56c26.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+  </body>
+
+</html>

@@ -1,0 +1,37 @@
+{% from 'header/macro.njk' import header %}
+
+  {{ header({
+    "homeHref": "/",
+    "ariaLabel": "DfE UCD manual homepage",
+    "service": {
+      "name": "Department for Education User-Centered Design Manual",
+      "longName": "true"
+    },
+    "showNav": "true",
+    "showSearch": "true",
+    "searchAction": "/search/",
+    "searchInputName": "search-field",
+    "primaryLinks": [
+      {
+        "url"  : "/service-standard",
+        "label" : "DfE service standard"
+      },
+      {
+        'url' : '/design-system',
+        'label' : 'Design system'
+      },
+      {
+        'url'  : '/content',
+        'label' : 'Content style guide'
+      },
+      {
+        'url'  : '/accessibility',
+        'label' : 'Accessibility'
+      },
+      {
+        'url' : '/community-and-contribution',
+        'label' : 'Community and contribution'
+      }
+    ]
+    })
+  }

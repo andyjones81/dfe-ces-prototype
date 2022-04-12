@@ -1,0 +1,55 @@
+{% set ur = [
+  { title: "No pages added", url: "/user-research/" }
+] %}
+
+{% set accessibility = [
+  {
+    title: "Accessibility",
+    url: "/accessibility/"
+  }
+] %}
+
+{% set standards = [
+  {
+    title: "DfE service standard",
+    url: "/standards/service-standard"
+  }
+] %}
+
+<nav class="app-side-nav">
+
+  {%- if pageSection == "User research" %}
+    <ul class="nhsuk-list app-side-nav__list">
+      {% for item in ur %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+
+  {%- if pageSection == "Accessibility" %}
+    <h2 class="app-side-nav__heading">What everyone needs to know</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+      {% for item in accessibility %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>    
+  {% endif %}
+
+    {%- if pageSection == "Standards" %}
+    <h2 class="app-side-nav__heading">DfE service standard</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+      {% for item in standards %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>    
+  {% endif %}
+
+
+</nav>

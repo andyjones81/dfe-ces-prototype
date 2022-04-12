@@ -1,0 +1,34 @@
+{% set pageTitle = "Site map" %}
+{% set pageDescription = "A list of pages on this website - with links" %}
+{% set hideDescription = true %}
+{% set dateUpdated = "February 2022" %}
+
+{% extends "includes/layout-two-thirds.njk" %}
+
+{% block bodyContent %}
+
+  <ul>
+    <li>
+      <a href="/">Home</a>
+    </li>
+    <li>
+      <a href="/user-research/">User research</a>
+    </li>
+    <li>
+      <a href="/accessibility/">Accessibility</a>
+    </li>   
+    <li>
+      <a href="/accessibility-statement">Accessibility statement</a>
+    </li>
+    <li>
+      <a href="/cookie-policy">Cookie policy</a>
+    </li>
+    <li>
+      <a href="/terms-and-conditions">Terms and conditions</a>
+    </li>
+    <li>
+      <a href="/your-privacy">Your privacy</a>
+    </li>
+  </ul>
+
+{% endblock %}
