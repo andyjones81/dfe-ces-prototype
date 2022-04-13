@@ -2,12 +2,6 @@
   { title: "No pages added", url: "/user-research/" }
 ] %}
 
-{% set accessibility = [
-  {
-    title: "Accessibility",
-    url: "/accessibility/"
-  }
-] %}
 
 {% set standards = [
   {
@@ -16,23 +10,60 @@
   }
 ] %}
 
+
+{% set userresearch = [
+  {
+    title: "How we do user research in DfE",
+    url: "/user-research/"
+  }
+] %}
+
+{% set userResearchAccessibility = [
+  {
+    title: "Applying accessibility in user research",
+    url: "/user-research/accessibility"
+  },
+  {
+    title: "Identify people to test with",
+    url: "/user-research/accessibility/testing"
+  },
+  {
+    title: "Involve people at all stages",
+    url: "/user-research/accessibility/stages"
+  },
+  {
+    title: "Technical testing",
+    url: "/user-research/accessibility/tools"
+  },
+  {
+    title: "Understand particiants' needs before you test",
+    url: "/user-research/accessibility/needs"
+  },
+  {
+    title: "Make your research more accessible on the day",
+    url: "/user-research/accessibility/day"
+  },
+  {
+    title: "Look after your team",
+    url: "/user-research/accessibility/team"
+  }
+] %}
+
 <nav class="app-side-nav">
 
+
   {%- if pageSection == "User research" %}
+    <h2 class="app-side-nav__heading">What everyone needs to know</h2>
     <ul class="nhsuk-list app-side-nav__list">
-      {% for item in ur %}
+      {% for item in userresearch %}
         <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
           <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
       {% endfor %}
-    </ul>
-  {% endif %}
-
-
-  {%- if pageSection == "Accessibility" %}
-    <h2 class="app-side-nav__heading">What everyone needs to know</h2>
+    </ul>   
+     <h2 class="app-side-nav__heading">Accessibility</h2>
     <ul class="nhsuk-list app-side-nav__list">
-      {% for item in accessibility %}
+      {% for item in userResearchAccessibility %}
         <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
           <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
@@ -44,7 +75,7 @@
     <h2 class="app-side-nav__heading">DfE service standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
       {% for item in standards %}
-        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+        <li class="app-side-nav__item{% if item.title == pageTitle or item.title == subSection %} app-side-nav__item--current{% endif %}">
           <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
       {% endfor %}

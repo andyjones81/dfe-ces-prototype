@@ -1,0 +1,38 @@
+{% set pageTitle = "Applying accessibility in user research" %}
+{% set pageDescription = "" %}
+{% set pageSection = "User research" %}
+{% set subSection = "Accessibility" %}
+{% set theme = "Accessibility" %}
+{% set dateUpdated = "April 2022" %}
+{% set backlog_issue_id = "4" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block notificationBanner %}
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      You'll be assessed on this
+    </span>
+  </h3>
+  <p><a href="/standards/service-standard/5">Service Standard - Point 5</a></p>
+   <p>This page gives you guidance about how to meet this point at both CDDO and DfE service assessments.</p>
+</div>
+
+{% endblock %}
+
+
+{% block bodyContent %}
+
+    {% markdown %}
+
+...
+
+    {% endmarkdown %}
+{% endblock %}

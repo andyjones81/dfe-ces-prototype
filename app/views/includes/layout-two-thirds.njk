@@ -26,6 +26,8 @@
             {{pageTitle}}
           </h1>
 
+          {% block notificationBanner %}{% endblock %}
+
           {%- if hideDescription %}
           {% else %}
             <p class="nhsuk-lede-text app-lede-text">{{pageDescription}}</p>
@@ -42,8 +44,6 @@
           {%- if updatedBy %}
             <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Updated by: {{updatedBy}}</p>
           {% endif %}
-
-          
 
         </div>
 

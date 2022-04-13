@@ -1,0 +1,64 @@
+{% set pageTitle = "5. Make sure everyone can use the service" %}
+{% set pageDescription = "Make sure your service can be used by people with different physical, mental, social, cultural or learning needs, whether it's for the public or for staff working in DfE or across the education sector." %}
+{% set pageSection = "Standards" %}
+{% set subSection = "DfE service standard" %}
+{% set theme = "DfE service standard" %}
+{% set dateUpdated = "April 2022" %}
+{% set backlog_issue_id = "4" %}
+
+{% extends "includes/app-layout.njk" %}
+
+{% block breadcrumb %}
+    {% include "standards/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block notificationBanner %}
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      You'll be assessed on this
+    </span>
+  </h3>
+   <p>This page gives you guidance about how to meet this point at both CDDO and DfE service assessments.</p>
+</div>
+
+{% endblock %}
+
+
+{% block bodyContent %}
+
+    {% markdown %}
+
+
+<p class="nhsuk-lede-text app-lede-text">This also includes people who do not have access to the internet or lack the skills or confidence to use it.</p>
+
+<p class="nhsuk-lede-text app-lede-text">Build an inclusive service.</p>
+
+
+
+## Accessibility and the law
+
+Everyone who works on DfE digital services has a role to play in making them accessible and inclusive.
+
+If your service isn't accessible to everyone who needs it, you may be breaking the <a href="https://www.legislation.gov.uk/ukpga/2010/15/contents" target="_blank">2010 Equality Act</a>.
+
+New accessibility regulations say that public sector websites must meet accessibility standards and publish an accessibility statement. You can find out <a href="https://www.gov.uk/guidance/accessibility-requirements-for-public-sector-websites-and-apps" target="_blank">more about the new regulations on GOV.UK</a>.
+
+## How to meet this standard
+
+### At discovery
+
+### At alpha
+
+Understand your users and do some [user research with people with access needs](/user-research/accessibility/).
+
+### At beta 
+
+This includes private and public beta.
+
+### When live
+
+    {% endmarkdown %}
+{% endblock %}

@@ -38,7 +38,7 @@ export default (config) => {
       confirmOnBlur: false,
       element: container,
       id: inputId,
-      minLength: 2,
+      minLength: 1,
       name: input.name,
       placeholder: input.placeholder,
     };

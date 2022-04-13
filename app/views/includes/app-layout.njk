@@ -16,6 +16,8 @@
 
           <h1 class="app-page-heading">
 
+          
+
             <span class="nhsuk-caption-l">
               {%- if subSection %}
                 {%- if theme %}
@@ -31,6 +33,13 @@
 
             {{pageTitle}}
           </h1>
+  {%- if dateUpdated %}
+            <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5">Last updated {{dateUpdated}}
+              {%- if updatedBy %} by {{updatedBy}}</p>
+            {% endif %}
+          {% endif %}
+
+          {% block notificationBanner %}{% endblock %}
 
           {%- if hideDescription %}
           {% else %}
@@ -50,12 +59,13 @@
 
           {% block afterContact %}{% endblock %}
 
-          {%- if dateUpdated %}
-            <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">Last updated: {{dateUpdated}} {%- if updatedBy %} by {{updatedBy}}</p>
-          {% endif %}</p>
-          {% endif %}
+        
 
-                  
+          {%- if backlog_issue_id%}
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0"><a href="https://github.com/DFE-Digital/ucd-manual-prototype/issues/{{backlog_issue_id}}" target="_blank">View GitHub issue for this page</a></p>
+          {% else%}
+          <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-5 nhsuk-u-margin-bottom-0">No GitHub issue exists for this page</p>
+          {% endif %}
 
         </div>
       </div>
