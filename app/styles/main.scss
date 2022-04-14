@@ -242,7 +242,7 @@ h1 + .nhsuk-lede-text {
 .nhsuk-header,
 .nhsuk-header__navigation,
 .nhsuk-hero {
-  background-color: #003078;
+  background-color: #003a69;
 }
 
 .nhsuk-card__content {
@@ -262,13 +262,13 @@ h1 + .nhsuk-lede-text {
 }
 
 .dfeuk-hr {
-  border-bottom: 10px solid #003078;
+  border-bottom: 10px solid #003a69;
 }
 
 .nhsuk-card__heading--feature,
 .nhsuk-do-dont-list__label,
 .nhsuk-card.nhsuk-card--invert {
-  background: #003078;
+  background: #003a69;
 }
 
 .nhsuk-card--invert.nhsuk-card--clickable:hover .nhsuk-card__heading a,
@@ -310,11 +310,29 @@ h1 + .nhsuk-lede-text {
 }
 
 .nhsuk-table__heading-tab {
-  background-color: #003078;
+  background-color: #003a69;
 }
 
 .nhsuk-footer__list{width: 100%}
 
 .nhsuk-warning-callout {
   margin-top: 28px;
+}
+
+
+.nhsuk-footer {
+  border-top: 4px solid #003a69;
+}
+
+.nhsuk-header__search-form--search-results .nhsuk-search__submit {
+  background-color: #003a69;
+}
+
+.nhsuk-header__search-form--search-results .nhsuk-search__submit:hover {
+  background-color: #6F777B;    
+
+}
+
+.nhsuk-header__search-form--search-results .nhsuk-search__submit .nhsuk-icon__search:hover {
+  fill: #212b32;
 }

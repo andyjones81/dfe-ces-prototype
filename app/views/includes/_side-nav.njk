@@ -5,8 +5,12 @@
 
 {% set standards = [
   {
-    title: "DfE service standard",
-    url: "/standards/service-standard"
+    title: "DfE Service Standard",
+    url: "/standards"
+  },
+    {
+    title: "How you'll be assessed",
+    url: "/standards/assessment"
   }
 ] %}
 
@@ -72,7 +76,7 @@
   {% endif %}
 
     {%- if pageSection == "Standards" %}
-    <h2 class="app-side-nav__heading">DfE service standard</h2>
+    <h2 class="app-side-nav__heading">DfE Service Standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
       {% for item in standards %}
         <li class="app-side-nav__item{% if item.title == pageTitle or item.title == subSection %} app-side-nav__item--current{% endif %}">
