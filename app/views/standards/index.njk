@@ -1,8 +1,9 @@
-{% set pageTitle = "DfE Service Standard" %}
-{% set pageDescription = "This companion to the GOV.UK Service Standard will ensure that you're working to best practice from the start." %}
-{% set pageSection = "Standards" %}
+{% set pageTitle = "Service Standards in DfE" %}
+{% set pageDescription = "How to apply the GOV.UK Service Standard to services in DfE." %}
+{% set pageSection = "Service Standards in DfE" %}
 {% set dateUpdated = "April 2022" %}
 {% set backlog_issue_id = "4" %}
+{% set isSectionHomepage = "true" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -15,13 +16,16 @@
     {% markdown %}
 
 
-The DfE Service Standard is designed to help teams:
+{{ insetText({
+  "HTML": "<p>The Service Standards in DfE guidance contains the 14 points of the GOV.UK service standard, enabling you to:
 
-- meet the <a href="https://www.gov.uk/service-manual/service-standard" target="_blank" rel="noopner noreferrer">GOV.UK Service Standard (opens in a new tab)</a>
+- meet the <a href=\"https://www.gov.uk/service-manual/service-standard\" target=\"_blank\" rel=\"noopner noreferrer\">GOV.UK Service Standard (opens in a new tab)</a> in the context of DfE
 - address the different needs of education service users
 - navigate the complexities of delivering digital services in the education sector
 
-It contains the 14 points of the GOV.UK service standard, with guidance to help teams meet them in an education context.
+</p>"
+}) }}
+
 
 You must meet all 14 points of the service standard whether your service is being assessed by the Central Digital and Data Office (CDDO) or through the DfE Assessment Team.
 

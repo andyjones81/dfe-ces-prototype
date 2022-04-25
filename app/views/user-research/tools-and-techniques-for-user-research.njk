@@ -1,0 +1,33 @@
+{% set pageTitle = "Tools and techniques" %}
+{% set pageDescription = "Examples of user research tools we use at DfE." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+- Optimal Workshop Tool - facilitating a remote session
+- Lookback - facilitating a remote session
+
+## Things to consider when using tools
+
+Not everyone will have the same licences. You can request a licence for a tool on the <a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" rel="noopner noreferrer" target="_blank">Digital Tools Support channel on Slack</a>.
+
+Users with access needs could have certain tools embedded in their software, for example, a screen reader like JAWS. Talk to participants beforehand to make sure they are using the relevant tools for your testing.
+
+Ideally you will [recruit user research participants](/user-research/how-to-recruit-people-to-test-with) who use assistive technology. There is also software available which replicates the experience of users with accessibility needs.
+
+{% endmarkdown %}
+
+{% endblock %}

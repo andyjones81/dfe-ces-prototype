@@ -1,0 +1,24 @@
+{% set pageTitle = "Design in DfE" %}
+{% set pageDescription = "Design principles, standards and guidance that we expect teams to meet when desinging DfE services." %}
+{% set pageSection = "Design" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "Design" %}
+{% set backlog_issue_id = "" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "design/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+This guidance complements the GOV.UK Service Manual and the GOV.UK Design System, which covers service and interaction design more broadly.
+
+{% endmarkdown %}
+
+{% endblock %}

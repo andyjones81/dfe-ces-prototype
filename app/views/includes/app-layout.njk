@@ -18,6 +18,7 @@
 
           
 
+             {% if isSectionHomepage !== "true" %}
             <span class="nhsuk-caption-l">
               {%- if subSection %}
                 {%- if theme %}
@@ -30,14 +31,10 @@
               {% endif %}
               <span class="nhsuk-u-visually-hidden"> - </span>
             </span>
-
+     {% endif %}
             {{pageTitle}}
           </h1>
-  {%- if dateUpdated %}
-            <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5">Last updated {{dateUpdated}}
-              {%- if updatedBy %} by {{updatedBy}}</p>
-            {% endif %}
-          {% endif %}
+ 
 
           {% block notificationBanner %}{% endblock %}
 
@@ -58,7 +55,11 @@
           {% endblock %}
 
           {% block afterContact %}{% endblock %}
-
+ {%- if dateUpdated %}
+            <p class="nhsuk-body-s nhsuk-u-secondary-text-color nhsuk-u-margin-top-0 nhsuk-u-margin-bottom-5">Last updated {{dateUpdated}}
+              {%- if updatedBy %} by {{updatedBy}}</p>
+            {% endif %}
+          {% endif %}
         
 
           {%- if backlog_issue_id%}

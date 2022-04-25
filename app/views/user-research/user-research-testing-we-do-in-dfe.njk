@@ -1,0 +1,30 @@
+{% set pageTitle = "User research testing we do in DfE" %}
+{% set pageDescription = "The types of user research testing we do in DfE." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+- Automated accessibility testing
+- Manual accessibility testing
+- Accessibility testing and audit
+- CDDO accessibility testing
+
+
+{% endmarkdown %}
+
+{% endblock %}
+
+

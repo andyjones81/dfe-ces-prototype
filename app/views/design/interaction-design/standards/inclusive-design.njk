@@ -1,0 +1,87 @@
+{% set pageTitle = "Inclusive design" %}
+{% set pageDescription = "Inclusive design aims to remove barriers that create extra effort for some groups of users." %}
+{% set pageSection = "Interaction design" %}
+{% set subSection = "Standards" %}
+
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "a Senior Interaction Designer" %}
+{% set backlog_issue_id = "" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "design/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+{{ insetText({
+  "HTML": "<p>A design methodology that enables and draws on the full range of human diversity.</p>"
+}) }}
+
+
+If we use our own abilities and biases as a starting point, we end up with services designed for people of a specific gender, age, language ability, tech literacy, and physical ability.
+
+## There’s no such thing as a "normal user". 
+
+The interactions we design with technology depend heavily on what we can see, hear, say, and touch. 
+
+Assuming all those senses and abilities are fully enabled all the time creates the potential to ignore many people who may have impairments with one or more of their senses.
+
+## Why you should care as a designer
+
+Designing for inclusivity not only opens up our services to more people with a wider range of abilities. It also reflects how people really are. 
+
+We want our services and what we design to reflect the diversity of our users.
+
+Every decision we make can raise or lower barriers to participation in society. It’s our collective responsibility to lower these barriers though inclusive products and services.
+
+
+## Recognise exclusion in design
+
+Exclusion happens when we solve problems using our own biases.
+
+There are different ways someone can be exluded from using a service through disability and it is dependent on the context the user is using your service. 
+
+There are three types of exclusion designers must consider when desinging services, components and features.
+
+### Temporary 
+
+Short term injury or context affects how users interact with your service. For example, having a broken arm may make it more difficult to use a phone, computer or mouse and keyboard.
+
+### Situational
+
+The situation a user finds themself in might mean they can't use your service at that time. For example, being in a loud environment might make it difficult to hear or speak to someone on the phone if they need help using a service.
+
+### Permanent
+
+Many people have a permanent disability and so designing for these users by default means your service will work for more people. For example, ensuring a service works with screen readers will work for a wide range of people.
+
+{{ insetText({
+  "HTML": "<p  class=\"nhsuk-u-font-weight-bold\">Think differently</p><p>Supporting screen reader software is supporting screen reader software, not blind people.</p>"
+}) }}
+
+
+## Build knowledge in diversity
+
+Inclusive design helps you to ensure you [Understand users and their needs](/standards/service-standard/1) and that [everyone can use the service](/standards/service-standard/5). 
+
+Don't rely on simulating different abilities for example, using blindfolds, earplugs or putting one hand behind your back, test your service with a wide range of users.
+
+Having empathy for your users and learning how users adapt in different ways to using your service, designers can better understand how to design for a wide range of abilities.
+
+## Solve for one, works for all
+
+Inclusive design means desigining with consideration for many different circumstances. 
+
+However, ensuring your service works for blind users has a knock on effect that it'll all work for users with temporary vision issues using vice over or a screen reader. 
+
+Additionally, someone who might find it easier to listen to guidance or content rather than read it if they are cooking dinner or out for a walk.
+
+
+{% endmarkdown %}
+
+{% endblock %}

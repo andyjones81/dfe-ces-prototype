@@ -1,0 +1,41 @@
+{% set pageTitle = "Principles" %}
+{% set pageDescription = "Interaction designers use principles such as visibility, findability and learnability to address basic human behaviors." %}
+{% set pageSection = "Interaction design" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "a Senior Interaction Designer" %}
+{% set backlog_issue_id = "" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "design/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+Designers use some design principles to guide actions. Perceived affordances such as buttons are an example. That way, we put users in control in seamless experiences.
+
+## The ten commandments of interaction design
+
+<ol class="nhsuk-list nhsuk-list--number">
+  <li>Keep users informed of system status with constant feedback.</li>
+  <li>Set information in a logical, natural order.</li>
+  <li>Ensure users can easily undo or redo actions.</li>
+  <li>Maintain consistent standards so users know what to do next without having to learn new toolsets.</li>
+  <li>Prevent errors if possible; wherever you can’t do this, warn users before they commit to actions.</li>
+  <li>Don’t make users remember information – keep options and selections visible.</li>
+  <li>Make systems flexible so novices and experts can choose to do more or less on them.</li>
+  <li>Design with aesthetics and minimalism in mind – don’t clutter with unnecessary items.</li>
+  <li>Provide plain-language error messages to pinpoint problems and likely solutions.</li>
+  <li>Offer easy-to-find troubleshooting resources, if needed.</li>
+</ol>
+
+
+
+
+{% endmarkdown %}
+
+{% endblock %}

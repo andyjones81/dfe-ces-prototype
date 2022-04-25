@@ -1,0 +1,76 @@
+{% set pageTitle = "Alpha" %}
+{% set pageDescription = "What user researchers need to do to meet the Service Standard at alpha phase." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+## To meet point 5 of the Service Standard
+
+User researchers must:
+
+- consider the diversity of the end-users
+- test with people with access needs
+- work with interaction designers to work and test prototypes
+- consider the limitations of prototypes when testing with users with access needs
+
+### How you'll be assessed on this
+
+At an alpha assessment assessors will look for:
+
+- how the team is including people with access needs, assisted digital, citizens and members of staff in their research
+- understanding of limitations and constraints for testing with users with access needs and have a plan for further testing
+- user researchers have worked with content and interaction designers to consider how they might test prototypes with users with access needs 
+- where prototypes are not accessible, alternative ways to provide content for the service have been tested
+- how you’ve been writing <a href="https://www.gov.uk/service-manual/agile-delivery/writing-user-stories" target="_blank" rel="noopner noreferrer">user stories for your service</a> - including for users who need <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction" target="_blank" rel="noopner noreferrer">assisted digital support</a>
+
+{{ list({
+  "title": "Things to avoid in alpha",
+  "type": "cross",
+  "hidePrefix": "true",
+  "items": [
+    {
+      "item": "no user research or limited research has taken place"
+    },
+    {
+      "item": "too large a scope with no clear research question or hypothesis"
+    },
+    {
+      "item": "no understanding of how the work fits into the wider context"
+    },
+    {
+      "item": "team doesn’t understand the research findings"
+    },
+    {
+      "item": "user needs that describe solutions or business requirements"
+    },
+    {
+      "item": "no negative findings"
+    },
+    {
+      "item": "no evidence of how research was used to iterate prototypes and develop thinking "
+    },
+    {
+      "item": "research findings that are about user preference not user behaviour"
+    },
+    {
+      "item": "overlooking a potentially key user group"
+    }
+  ]
+}) }}
+
+{% endmarkdown %}
+
+{% endblock %}

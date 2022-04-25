@@ -1,0 +1,67 @@
+{% set pageTitle = "Discovery" %}
+{% set pageDescription = "What user researchers need to do to meet the Service Standard at discovery phase." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+## To meet point 5 of the Service Standard
+
+User researchers must:
+
+- consider how people will use the service with assistive technology such as
+ <a href="https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies" target="_blank" rel="noopner noreferrer">screen readers, speech recognition software and magnifiers (opens in new tab)</a> 
+- research with participants with access needs to be aware of the types of users you may need to test with in alpha
+- not rely solely on external accessibility audits, for example <a href="https://digitalaccessibilitycentre.org/" target="_blank" rel="noopner noreferrer">Digital Accessibility Centre (DAC) (opens in new tab)</a> audits 
+- demonstrate a good sample of users from realistic user groups
+- engage stakeholders early on and advocate for designing an accessible service in future phases
+
+### How you'll be assessed on this
+
+At a discovery assessment assessors will look for:
+
+- enough research with target users has been carried out
+- decisions made on research observations and user needs
+- the team's understanding of accessibility and assisted digital needs
+- how the team plans to recruit participants with access needs to test any prototypes in alpha
+
+{{ list({
+  "title": "Things to avoid in discovery",
+  "type": "cross",
+  "hidePrefix": "true",
+  "items": [
+    {
+      "item": "no user research or limited research has taken place"
+    },
+    {
+      "item": "no hypothesis for alpha"
+    },
+    {
+      "item": "team doesn’t understand the research findings"
+    },
+    {
+      "item": "user needs that describe solutions or business requirements"
+    },
+    {
+      "item": "research findings that are about user preference not user behaviour"
+    },
+    {
+      "item": "overlooking a potentially key user group"
+    }
+  ]
+}) }}
+{% endmarkdown %}
+
+{% endblock %}

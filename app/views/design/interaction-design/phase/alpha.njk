@@ -1,0 +1,97 @@
+{% set pageTitle = "Alpha" %}
+{% set pageDescription = "What interaction designers need to do to meet the Service Standard at alpha phase." %}
+{% set pageSection = "Interaction design" %}
+{% set subSection = "What you need to do at each phase" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "a Senior Interaction Designer" %}
+{% set backlog_issue_id = "" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "design/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+## What you need to do at alpha
+
+In alpha interaction designers try out different solutions to the problems defined in discovery, including:
+
+- work out the best way for users interact with the service
+- challenge the way things are done at the moment
+- test the riskiest assumptions
+- design and test multiple solutions to make sure the right thing is being built
+- decide on high-level to be user journeys for example: online, offline, happy path, sad path and failures
+- facilitate co-design sessions with stakeholders, content designers and developers
+- test ideas quickly with low fidelity prototypes
+- work closely with the user researcher and attend user research sessions
+- identify existing patterns that could be reused
+- communicate design decisions to stakeholders
+- make sure the service is inclusive
+
+### How you'll be assessed on this
+
+At an alpha assessment assessors will look for how:
+
+- the team has tried a variety of ways to meet user needs
+- you demonstrate what you've learned and iterated
+- the team has prototyped critical journeys, iterating them and throwing some away
+- you have designed a resonable solution to the user needs - it doesnt have to be perfect at alpha
+- designers are working to solve the whole problem for users
+- service touchpoints have been understood and considered
+- the team knows where the service starts and ends
+- prototypes have been used in user research
+- the GOV.UK Design System and DfE Components are being used and iterated where needed
+- new components and patterns are being contributed to and shared across DfE
+
+### Some of the things you can evidence
+
+During the service assessment you'll be expected to show your prototypes and walk the panel through the user journey. Other ways you can do this include:
+
+- show prototypes of services and iterations
+- design history showing how the service has changed based on evidence
+- service blueprints and journey maps showing service touchpoints
+- show and tells you've run, design crits and other collaboration sessions
+
+{{ list({
+  "title": "Things to avoid in alpha",
+  "type": "cross",
+  "hidePrefix": "true",
+  "items": [
+    {
+      "item": "the service being a digital version of a paper process"
+    },
+    {
+      "item": "the service ends at the end of the process not when the user has achieved their goal"
+    },
+    {
+      "item": "the prototype is a collection of screens rather than a journey"
+    },
+    {
+      "item": "the prototype is fully functional code and not throw away"
+    },
+    {
+      "item": "the team is resistant to throwing things away"
+    },
+    {
+      "item": "design has relied on complex interactions or UI elements"
+    },
+    {
+      "item": "only one solution has been tried"
+    },
+    {
+      "item": "no prototypes have been built"
+    },
+    {
+      "item": "assessors don't have access to the prototype"
+    }
+  ]
+}) }}
+
+{% endmarkdown %}
+
+{% endblock %}

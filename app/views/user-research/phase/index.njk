@@ -1,0 +1,41 @@
+{% set pageTitle = "What you need to do at each phase" %}
+{% set pageDescription = "" %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+## Discovery
+
+- Consider the assisted technology routes to the service, for example, [screen readers, speech recognition software and magnifiers] (Testing with assistive technologies - Service Manual - GOV.UK (www.gov.uk)). 
+- Research with users with access needs to be aware of all users and what needs they have when you go into alpha
+- Do not assume you can solely rely on external accessibility audits, for example Digital Accessibility Centre audits (DAC). 
+- Demonstrate a good sample of users from realistic user groups
+
+## Alpha
+
+- Consider the diversity of the end-users. The team is including in their research people with access needs, assisted digital, citizens and members of staff. This should take into account the scope of the alpha and what can realistically be learnt. The team should be aware of any limitations and have a plan for further testing.
+- Test with people with access needs
+
+## Beta and live
+
+- Demonstrate how you’ve done user research with people who have accessibility needs from the time you started designing the service
+- Demonstrate how you’ve tested with users who need assisted digital support
+- Continually test and iterate the service
+
+
+{% endmarkdown %}
+
+{% endblock %}

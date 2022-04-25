@@ -1,0 +1,69 @@
+{% set pageTitle = "How to recruit participants" %}
+{% set pageDescription = "Different ways to recruit participants including those with accessibility needs." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+{{ insetText({
+  "HTML": "<p>The guidance on this page is in addition to <a href=\"https://www.gov.uk/service-manual/user-research/find-user-research-participants\" target=\"_blank\" rel=\"noopner noreferrer\">Service Manual guidance for recruiting user research participants<span class=\"nhsuk-u-visually-hidden\">(opens in new tab)</span></a>.</p>"
+}) }}
+
+## Recruiting participants
+
+You must include people with disabilities at every stage of testing. Don’t do an accessibility testing sprint at the end of the project or just before your assessment.
+
+When recruiting participants, you need to consider:
+
+- the range of people with accessibility needs you might need to speak to when writing a research plan
+- the ratio of users with accessibility needs compared to the number of people using the service
+- how to screen for users with access needs, consider things like English as a second language, neurodiversity and temporary access needs
+- asking questions based on user requirements and not on a person's disability
+
+
+## How should user researchers get an appropriate representation of users
+
+Include participants with access needs to make sure the service works for everyone. 
+
+Keep a record of who you’ve spoken to and what their access needs are. For example, recording that you've spoken to people with a sight impairment but not with hearing impairment.
+
+
+{{ card({
+  "href": "https://how-many.herokuapp.com/",
+  "clickable": "true",
+  "heading": "Estimate how many people using the service might be disabled",
+  "headingClasses": "nhsuk-heading-m",
+  "description": "Service which indicates the number and types of users with access needs you may need to recruit for.",
+  "external": "true"
+}) }}
+
+## If you're finding it difficult to recruit participants with access needs
+
+{{ insetText({
+  "HTML": "<p>It's not acceptable to provide a service which hasn't been tested with users with access needs.</p>"
+}) }}
+
+Consider recruiting people with access needs who aren’t your users, but perform a similar role. For example, administrators, managers or financial users.
+
+This is not ideal but is significantly better than doing no research or testing with users who are not representative of the users of the service. 
+
+If you are still struggling, you can use the recruitment agency <a href="https://www.criteria.co.uk/" target="_blank" rel="noopner noreferrer" >Criteria (opens in new tab)</a> to recruit participants.
+
+You'll need to write a screener and a business case for using Criteria. To get help, use the <a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" rel="noopner noreferrer" target="_blank">user research channel on Slack</a>.
+
+
+{% endmarkdown %}
+
+{% endblock %}

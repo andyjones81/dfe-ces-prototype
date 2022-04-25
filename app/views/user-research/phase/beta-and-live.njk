@@ -1,0 +1,62 @@
+{% set pageTitle = "Beta and live" %}
+{% set pageDescription = "What user researchers need to do to meet the Service Standard at beta and live phases." %}
+{% set pageSection = "User research" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "User Research Lead" %}
+{% set backlog_issue_id = "1" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+## To meet point 5 of the Service Standard
+
+User researchers must:
+
+- show evidence of research with people who have accessibility needs, from the time you started designing the service
+- show evidence of how you’ve tested with users who need assisted digital support
+- continue to test and iterate the service with users with access needs to ensure assistive technology works 
+- ensure users test the service on their own devices using their own accessibility software
+- engage with technical colleagues to understand outcomes from automated or manual accessibility tests. Plan follow up on any ambiguous points with qualitative research
+- ensure representative data is collected and remains compliant while service is live
+- use performance data and service feedback to understand how people are using the service
+
+
+### How you'll be assessed on this
+
+At an beta or live assessment assessors will look for:
+
+- a user research plan for the service at the next phase and a plan for carrying out user research on the live service
+- how you’ve done user research with people who have accessibility needs from the time you started designing the service
+- how you’ve tested with users who need assisted digital support
+- any problems you’ve found through testing and how you solved them
+- any problems you have not been able to solve in beta and how you’ll handle them when the service is live
+
+{{ list({
+  "title": "Things to avoid in beta and live",
+  "type": "cross",
+  "hidePrefix": "true",
+  "items": [
+    {
+      "item": "not enough people have been invited to the private beta with access needs"
+    },
+    {
+      "item": "not having, or testing, an assisted digital route"
+    },
+    {
+      "item": "not enough research to understand how users with access needs might interact with the service"
+    }
+  ]
+}) }}
+
+{% endmarkdown %}
+
+{% endblock %}

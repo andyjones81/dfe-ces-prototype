@@ -1,0 +1,44 @@
+{% set pageTitle = "Accessibility" %}
+{% set pageDescription = "Ensuring what you design is accessible means making sure it can be used by everyone." %}
+{% set pageSection = "Interaction design" %}
+{% set subSection = "Standards" %}
+
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "a Senior Interaction Designer" %}
+{% set backlog_issue_id = "" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "design/_breadcrumb.njk" %}
+{% endblock %}
+
+
+{% block notificationBanner %}
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      You'll be assessed on this
+    </span>
+  </h3>
+   <p>CDDO and DfE service assessments will ensure that you have met the following points: </p>
+   <ul class="nhsuk-list">
+   <li><a href="/standards/service-standard/5">5. Make sure everyone can use the service</a></li>
+</ul>
+</div>
+
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+
+{% include "includes/_why-accessibility.njk" %}
+
+{% endmarkdown %}
+
+{% endblock %}

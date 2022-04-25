@@ -1,0 +1,29 @@
+{% set pageTitle = "How we write for the standards in DfE service" %}
+{% set pageDescription = "" %}
+{% set pageSection = "Content" %}
+{% set dateUpdated = "April 2022" %}
+{% set updatedBy = "Content designer" %}
+{% set backlog_issue_id = "" %}
+{% set isSectionHomepage = "true" %}
+
+{% extends "includes/app-layout.njk" %}
+
+
+{% block breadcrumb %}
+  {% include "content/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block bodyContent %}
+
+{% markdown %}
+
+## Characters to avoid
+
+- Slashes ‘/’ - Screen readers may read out a ‘/’ as ‘slash’ and may break the flow of a sentence. Try and use meaningful words, such as ‘or’ ‘and’ instead.
+- Hyphens - use sparingly, as they can cause usability issues. Do not use hyphens for things like date ranges. Use ‘to’ instead. For example, October to December 2022. 
+- Single quote marks - Use single quotes with caution - they’re often used incorrectly. For example, to make an internal phrase look or sound more important. 
+
+
+{% endmarkdown %}
+
+{% endblock %}
