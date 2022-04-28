@@ -40,7 +40,7 @@
     {%- block extraMeta %}{% endblock %}
 
     <title>
-      {% if pageTitle %}{{ pageTitle }} - Service standards for the Department for Education{% else %}Service standards for the Department for Education{% endif %}
+      {% if pageTitle %}{{ pageTitle }} - Service Standard for the Department for Education{% else %}Service Standard for the Department for Education{% endif %}
     </title>
 
     <link rel="stylesheet" href="/css/main.css">
@@ -48,7 +48,7 @@
     <script src="/js/main.min.js" defer></script>
 
     <!-- Cookie consent -->
-    <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script>
+    {# <script src="/js/cookies.min.js" data-policy-url="/cookie-policy" defer></script> #}
 
     <!-- Verify domain with Google -->
     <meta name="google-site-verification" content=""/>
@@ -61,8 +61,8 @@
     <link rel="apple-touch-icon" href="https://www.gov.uk/assets/static/govuk-apple-touch-icon-5f801db05920bd1eb2b27a7a90328599bb16b6344c3213795af0f20d3ca179b0.png">
 
     <meta property="og:url" content="{{ BASE_URL }}"/>
-    <meta property="og:site_name" content="Service standards for the Department for Education"/>
-    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - Service standards for the Department for Education{% else %}Service standards for the Department for Education{% endif %}"/>
+    <meta property="og:site_name" content="Service standard for the Department for Education"/>
+    <meta property="og:title" content="{% if pageTitle %}{{ pageTitle }} - Service Standard for the Department for Education{% else %}Service Standard for the Department for Education{% endif %}"/>
     <meta property="og:description" content="{% if pageDescription %}{{pageDescription}}{% else %}Design and build digital services for the Department for Education.{% endif %}"/>
     <meta property="og:type" content="website"/>
     <meta property="og:locale" content="en_GB"/>
@@ -71,7 +71,17 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@dfe_digital">
     <meta name="twitter:creator" content="@dfe_digital">
-    <meta name="twitter:image:alt" content="Service standards for the Department for Education">
+    <meta name="twitter:image:alt" content="Service Standard for the Department for Education">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-ZK9QZLB3Q8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-ZK9QZLB3Q8');
+</script>
 
   </head>
 

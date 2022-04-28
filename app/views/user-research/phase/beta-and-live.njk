@@ -1,44 +1,75 @@
 {% set pageTitle = "Beta and live" %}
-{% set pageDescription = "What user researchers need to do to meet the Service Standard at beta and live phases." %}
+{% set pageDescription = "What user researchers need to do to meet the Service Standard in beta and live." %}
 {% set pageSection = "User research" %}
+{% set subSection = "What you need to do at each phase" %}
 {% set dateUpdated = "April 2022" %}
 {% set updatedBy = "User Research Lead" %}
 {% set backlog_issue_id = "1" %}
-{% set isSectionHomepage = "true" %}
 
 {% extends "includes/app-layout.njk" %}
 
-
 {% block breadcrumb %}
   {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block notificationBanner %}
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      You'll be assessed on this
+    </span>
+  </h3>
+   <p>Central Digital and Data Office (CDDO) and DfE service assessments will ensure that you have met the following Service Standard points: </p>
+   <ul class="nhsuk-list">
+   <li><a href="/standards/service-standard/5">Point 5 - Make sure everyone can use the service</a></li>
+</ul>
+</div>
+
 {% endblock %}
 
 {% block bodyContent %}
 
 {% markdown %}
 
-## To meet point 5 of the Service Standard
+## To meet the Service Standard user researchers must:
 
-User researchers must:
-
-- show evidence of research with people who have accessibility needs, from the time you started designing the service
+- show evidence of research with people who have access needs, from the time you started designing the service
 - show evidence of how you’ve tested with users who need assisted digital support
 - continue to test and iterate the service with users with access needs to ensure assistive technology works 
 - ensure users test the service on their own devices using their own accessibility software
 - engage with technical colleagues to understand outcomes from automated or manual accessibility tests. Plan follow up on any ambiguous points with qualitative research
-- ensure representative data is collected and remains compliant while service is live
 - use performance data and service feedback to understand how people are using the service
 
+### Things to consider
 
-### How you'll be assessed on this
+It's good practice to consider how you'll meet this standard, even if the service you are working on is not being assessed.
 
-At an beta or live assessment assessors will look for:
 
-- a user research plan for the service at the next phase and a plan for carrying out user research on the live service
-- how you’ve done user research with people who have accessibility needs from the time you started designing the service
-- how you’ve tested with users who need assisted digital support
-- any problems you’ve found through testing and how you solved them
-- any problems you have not been able to solve in beta and how you’ll handle them when the service is live
+{{ list({
+  "title": "Assessors will look for",
+  "type": "tick",
+  "hidePrefix": "true",
+  "items": [
+    {
+      "item": "a plan for carrying out user research on the live service"
+    },
+    {
+      "item": "how you’ve done user research with people who have access needs from the time you started designing the service"
+    },
+    {
+      "item": "how you’ve tested with users who need assisted digital support"
+    },
+    {
+      "item": "any problems you’ve found through testing and how you solved them"
+    },
+    {
+      "item": "any problems you have not been able to solve in beta and how you’ll handle them when the service is live"
+    }
+  ]
+}) }}
+
 
 {{ list({
   "title": "Things to avoid in beta and live",
@@ -58,5 +89,4 @@ At an beta or live assessment assessors will look for:
 }) }}
 
 {% endmarkdown %}
-
 {% endblock %}

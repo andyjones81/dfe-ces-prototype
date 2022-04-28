@@ -1,40 +1,56 @@
 {% set pageTitle = "Alpha" %}
-{% set pageDescription = "What user researchers need to do to meet the Service Standard at alpha phase." %}
+{% set pageDescription = "What user researchers need to do to meet the Service Standard in alpha." %}
 {% set pageSection = "User research" %}
+{% set subSection = "What you need to do at each phase" %}
 {% set dateUpdated = "April 2022" %}
 {% set updatedBy = "User Research Lead" %}
 {% set backlog_issue_id = "1" %}
-{% set isSectionHomepage = "true" %}
 
-{% extends "includes/app-layout.njk" %}
-
+{% extends "includes/app-layout.njk" %} 
 
 {% block breadcrumb %}
   {% include "user-research/_breadcrumb.njk" %}
+{% endblock %}
+
+{% block notificationBanner %}
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      You'll be assessed on this
+    </span>
+  </h3>
+   <p>Central Digital and Data Office (CDDO) and DfE service assessments will ensure that you have met the following Service Standard points: </p>
+   <ul class="nhsuk-list">
+   <li><a href="/standards/service-standard/5">Point 5 - Make sure everyone can use the service</a></li>
+</ul>
+</div>
+
 {% endblock %}
 
 {% block bodyContent %}
 
 {% markdown %}
 
-## To meet point 5 of the Service Standard
+## To meet the Service Standard user researchers must:
 
-User researchers must:
-
-- consider the diversity of the end-users
+- consider the diversity of end users
 - test with people with access needs
-- work with interaction designers to work and test prototypes
+- work with interaction designers to test prototypes
 - consider the limitations of prototypes when testing with users with access needs
 
-### How you'll be assessed on this
+### Things to consider
 
-At an alpha assessment assessors will look for:
+It's good practice to consider how you'll meet this standard, even if the service you are working on is not being assessed.
 
-- how the team is including people with access needs, assisted digital, citizens and members of staff in their research
+If your service is being assessed, assessors will look for:
+
+- how the team is including people with access needs, assisted digital, members of the public and members of staff in their research
 - understanding of limitations and constraints for testing with users with access needs and have a plan for further testing
-- user researchers have worked with content and interaction designers to consider how they might test prototypes with users with access needs 
+- user researchers have worked with content and interaction designers to consider how they will test prototypes with users with access needs 
 - where prototypes are not accessible, alternative ways to provide content for the service have been tested
-- how you’ve been writing <a href="https://www.gov.uk/service-manual/agile-delivery/writing-user-stories" target="_blank" rel="noopner noreferrer">user stories for your service</a> - including for users who need <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction" target="_blank" rel="noopner noreferrer">assisted digital support</a>
+- how you’ve been writing <a href="https://www.gov.uk/service-manual/agile-delivery/writing-user-stories" target="_blank" rel="noopner noreferrer">user stories for your service</a>, including for users who need <a href="https://www.gov.uk/service-manual/helping-people-to-use-your-service/assisted-digital-support-introduction" target="_blank" rel="noopner noreferrer">assisted digital support</a>
 
 {{ list({
   "title": "Things to avoid in alpha",
@@ -48,7 +64,7 @@ At an alpha assessment assessors will look for:
       "item": "too large a scope with no clear research question or hypothesis"
     },
     {
-      "item": "no understanding of how the work fits into the wider context"
+      "item": "no understanding of how the work fits into the wider context of other DfE services"
     },
     {
       "item": "team doesn’t understand the research findings"

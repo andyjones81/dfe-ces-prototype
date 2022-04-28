@@ -1,10 +1,10 @@
 {% set pageTitle = "Tools and techniques" %}
-{% set pageDescription = "Examples of user research tools we use at DfE." %}
+{% set pageDescription = "User research tools we use in Department for Education (DfE)." %}
 {% set pageSection = "User research" %}
+{% set subSection = "How we do user research at DfE" %}
 {% set dateUpdated = "April 2022" %}
 {% set updatedBy = "User Research Lead" %}
 {% set backlog_issue_id = "1" %}
-{% set isSectionHomepage = "true" %}
 
 {% extends "includes/app-layout.njk" %}
 
@@ -17,16 +17,69 @@
 
 {% markdown %}
 
-- Optimal Workshop Tool - facilitating a remote session
-- Lookback - facilitating a remote session
+There are several tools and services used across DfE that support user researchers in carrying out research activities.
+
+If you need access to a specific tool or service, contact the <a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" rel="noopner noreferrer" target="_blank">Digital Tools Support channel on Slack (opens in new tab)</a>.
+
+{% from 'tables/macro.njk' import table %}
+
+{{ table({
+  panel: false,
+  caption: "Features and tools",
+  firstCellIsHeader: false,
+  head: [
+    {
+      text: "Features"
+    },
+    {
+      text: "Services you can use"
+    }
+  ],
+  rows: [
+  [
+      {
+        text: "Scheduling"
+      },
+      {
+        html: "<ul><li><a href=\"https://calendly.com/\" target=\"_blank\">Calend.ly (paid and free)</a></li><li>Microsoft Teams and Outlook</li></ul>"
+      }
+    ],
+     [
+      {
+        text: "Remote research facilitation"
+      },
+      {
+        html: "<ul><li><a href=\"https://www.lookback.com/\" target=\"_blank\">Lookback</a></li><li><a href=\"https://maze.co\" target=\"_blank\">Maze</a></li><li>Microsoft Teams and Outlook</li><li><a href=\"https://www.optimalworkshop.com/\" target=\"_blank\">Optimal Workshop</a></li><li><a href=\"https://www.zoom.com/\" target=\"_blank\">Zoom</a></li></ul>"
+      }
+    ],
+    [
+      {
+        html: "Card sorting and tree testing"
+      },
+      {
+        html: "<ul><li><a href=\"https://maze.co\" target=\"_blank\">Maze</a></li><li><a href=\"https://www.optimalworkshop.com/\" target=\"_blank\">Optimal Workshop</a></li></ul>"
+      }
+    ],
+    [
+      {
+        text: "Surveys"
+      },
+      {
+        html: "<ul><li><a href=\"https://docs.google.com/forms\" target=\"_blank\">Google Forms</a></li><li><a href=\"https://www.smartsurvey.co.uk/survey-software\" target=\"_blank\">Smart Survey</a></li></ul>"
+      }
+    ]
+  ]
+}) }}
 
 ## Things to consider when using tools
 
-Not everyone will have the same licences. You can request a licence for a tool on the <a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" rel="noopner noreferrer" target="_blank">Digital Tools Support channel on Slack</a>.
+Not everyone working in DfE will have a licence for tools and services. 
 
-Users with access needs could have certain tools embedded in their software, for example, a screen reader like JAWS. Talk to participants beforehand to make sure they are using the relevant tools for your testing.
+DfE employees and contractors can request a licence for a tool on the <a href="https://ukgovernmentdfe.slack.com/archives/CMS9V0JQL" rel="noopner noreferrer" target="_blank">Digital Tools Support channel on Slack</a>.
 
-Ideally you will [recruit user research participants](/user-research/how-to-recruit-people-to-test-with) who use assistive technology. There is also software available which replicates the experience of users with accessibility needs.
+Users with access needs could have certain tools installed on their device, for example, a screen reader like JAWS. 
+
+Check with participants beforehand to make sure they are using the relevant tools for your testing.
 
 {% endmarkdown %}
 

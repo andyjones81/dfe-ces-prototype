@@ -5,7 +5,7 @@
 
 {% set standards = [
   {
-    title: "Service Standards in DfE",
+    title: "Service Standard in the Department for Education",
     url: "/standards"
   }
 ] %}
@@ -49,18 +49,24 @@
     title: "Interaction design",
     url: "/design/interaction-design/"
   }, {
-    title: "Principles",
+    title: "Design principles",
     url: "/design/interaction-design/principles"
+  },{
+    title: "Design process tools and methods",
+    url: "/design/interaction-design/design-process-tools-and-methods"
+  },{
+    title: "Ways of working",
+    url: "/design/interaction-design/ways-of-working"
   }
 ] %}
 
 {% set ixdesignstandards = [
    {
-    title: "Standards all designers must follow",
+    title: "Designing accessible services",
     url: "/design/interaction-design/standards/"
   },{
-    title: "Component design standards",
-    url: "/design/interaction-design/standards/component-design-standards"
+    title: "Component design criteria",
+    url: "/design/interaction-design/standards/component-design-criteria"
   },{
     title: "Accessibility",
     url: "/design/interaction-design/standards/accessibility"
@@ -94,7 +100,7 @@
 
 {% set assessments = [
   {
-    title: "How you'll be assesed",
+    title: "How you'll be assessed",
     url: "/standards/assessments"
   },
   {
@@ -170,14 +176,19 @@
     title: "User research",
     url: "/user-research/"
   },{
-    title: "User research testing we do in DfE",
-    url: "/user-research/user-research-testing-we-do-in-dfe"
-  },{
     title: "Tools and techniques",
     url: "/user-research/tools-and-techniques-for-user-research"
   },{
     title: "How to recruit participants",
     url: "/user-research/how-to-recruit-people-to-test-with"
+  }
+] %}
+
+
+{% set uraccessibility = [
+  {
+    title: "Accessibility and inclusive research",
+    url: "/user-research/accessibility"
   }
 ] %}
 
@@ -208,6 +219,14 @@
           <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
         </li>
       {% endfor %}
+    </ul>  
+      <h2 class="app-side-nav__heading">Accessibility</h2>
+    <ul class="nhsuk-list app-side-nav__list">
+      {% for item in uraccessibility %}
+        <li class="app-side-nav__item{% if item.title == pageTitle %} app-side-nav__item--current{% endif %}">
+          <a class="app-side-nav__link" href="{{ item.url }}">{{ item.title }}</a>
+        </li>
+      {% endfor %}
     </ul>   
      <h2 class="app-side-nav__heading">What you need to do at each phase</h2>
     <ul class="nhsuk-list app-side-nav__list">
@@ -219,8 +238,8 @@
     </ul>    
   {% endif %}
 
-    {%- if pageSection == "Service Standards in DfE" %}
-    <h2 class="app-side-nav__heading">Service Standards in DfE</h2>
+    {%- if pageSection == "Service Standard in DfE" %}
+    <h2 class="app-side-nav__heading">Service Standard in DfE</h2>
     <ul class="nhsuk-list app-side-nav__list">
       {% for item in standards %}
         <li class="app-side-nav__item{% if item.title == pageTitle or item.title == subSection %} app-side-nav__item--current{% endif %}">
@@ -240,13 +259,13 @@
  
   {% endif %}
 
-      {%- if subSection == "Service Standards" %}
+      {%- if subSection == "Service Standard" %}
      {{ backLink({
       "href": "/standards/",
-      "text": "Service Standards in DfE",
+      "text": "Service Standard in DfE",
       "classes": "app-u-hide-mobile app-side-nav__back nhsuk-u-margin-bottom-4"
     }) }}
-        <h2 class="app-side-nav__heading">Service Standards</h2>
+        <h2 class="app-side-nav__heading">Service Standard</h2>
     <ul class="nhsuk-list app-side-nav__list">
       {% for item in standardpoints %}
         <li class="app-side-nav__item{% if item.title == pageTitle or item.title == subSection %} app-side-nav__item--current{% endif %}">

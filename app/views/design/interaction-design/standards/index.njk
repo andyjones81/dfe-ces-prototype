@@ -1,5 +1,5 @@
-{% set pageTitle = "Standards all designers must follow" %}
-{% set pageDescription = "Standards interaction designers must follow when desinging services, components and patterns." %}
+{% set pageTitle = "Designing accessible services" %}
+{% set pageDescription = "Basic considerations to help you design more consistent and accessible user interfaces." %}
 {% set pageSection = "Interaction design" %}
 {% set subSection = "Standards" %}
 
@@ -9,7 +9,6 @@
 
 {% extends "includes/app-layout.njk" %}
 
-
 {% block breadcrumb %}
   {% include "design/_breadcrumb.njk" %}
 {% endblock %}
@@ -17,6 +16,163 @@
 {% block bodyContent %}
 
 {% markdown %}
+
+When designing components, patterns or features for a service, you should be ensuring you are meeting the following Web Content Accessibility Guidelines (WCAG) requirements as a minimum.
+
+- [There is sufficient contrast between foreground and background](#provide-sufficient-contrast-between-foreground-and-background)
+- [That color alone is not used to convey information](#dont-use-color-alone-to-convey-information)
+- [Interactive elements are easy to identify]()
+- [Navigation options are clear and consistent across the service]()
+- [Form elements include clearly associated labels]()
+- [Feedback to the user is clear and identifiable]()
+- [Headings are used and related content is grouped together]()
+- [Designs for different viewports are considered]()
+- [Images and media contain alternative descriptions]()
+- [Controls for content that starts automatically are provided]()
+
+## Provide sufficient contrast between foreground and background
+
+Foreground text needs to have sufficient contrast with background colors. This includes text on images, background gradients, buttons, and other elements. 
+
+This does not apply for logos or text that is in a photograph. 
+
+You should meet a minimum contrast ratio of 4.5:1
+
+### Guidance for meeting this standard
+
+<a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 1.4.3 - Contrast (Minimum) Level - AA</a>
+
+### Tools you can use
+
+<a href="https://contrast-checker.glitch.me/" target="_blank">Contrast checker</a>
+
+<a href="https://microsoftedge.microsoft.com/addons/detail/colour-contrast-checker/jkmnghgbaaoohmjdblniohhjnpjmnand" target="_blank">Colour Contrast Checker Edge plugin</a>
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+## Don’t use color alone to convey information
+
+Color can be useful to indicate statuses or other information to users. However, color alone should not be the only way information is conveyed as people who are colorblind may perceive the ifnormation differently.
+
+When using color to differentiate elements, also provide additional information that does not rely on color perception. For example, use an asterisk or text in addition to color to indicate required form fields, and use labels to distinguish areas on graphs.
+
+You must also ensure when using text on colored backgrounds, you are meeting [minimum contrast ratios](#provide-sufficient-contrast-between-foreground-and-background).
+
+### Guidance for meeting this standard
+
+<a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">WCAG 1.4.1 - Use of color - Level A</a>
+
+### Tools you can use
+
+<a href="https://www.toptal.com/designers/colorfilter" target="_blank">Color blindness webpage checker</a>
+
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+## Interactive elements are easy to identify
+
+
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+## Navigation options are clear and consistent across the service
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+## Form elements include clearly associated labels
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+
+## Feedback to the user is clear and identifiable
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+## Headings are used and related content is grouped together
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+## Designs for different viewports are considered
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+## Images and media contain alternative descriptions
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
+
+
+## Controls for content that starts automatically are provided
+
+{{ actionLink({
+  "text": "Back to top",
+  "href": "#designing-accessible-services",
+  "classes": "nhsuk-icon__back-to-top"
+}) }}
+
+<hr class="nhsuk-section-break nhsuk-section-break--xl nhsuk-u-margin-top-0 nhsuk-u-padding-top-0 nhsuk-section-break--visible">
+
 
 
 

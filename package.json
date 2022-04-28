@@ -1,7 +1,7 @@
 {
   "name": "dfe-ucd-manual",
   "version": "0.0.1",
-  "description": "Service standards for the Department for Education",
+  "description": "Service standard for the Department for Education",
   "main": "app.js",
   "directories": {
     "test": "tests"

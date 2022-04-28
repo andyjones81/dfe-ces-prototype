@@ -1,38 +1,55 @@
 {% set pageTitle = "Discovery" %}
-{% set pageDescription = "What user researchers need to do to meet the Service Standard at discovery phase." %}
+{% set pageDescription = "What user researchers need to do to meet the Service Standard in discovery." %}
 {% set pageSection = "User research" %}
+{% set subSection = "What you need to do at each phase" %}
 {% set dateUpdated = "April 2022" %}
 {% set updatedBy = "User Research Lead" %}
 {% set backlog_issue_id = "1" %}
-{% set isSectionHomepage = "true" %}
-
 {% extends "includes/app-layout.njk" %}
-
 
 {% block breadcrumb %}
   {% include "user-research/_breadcrumb.njk" %}
 {% endblock %}
 
+{% block notificationBanner %}
+
+<div class="nhsuk-warning-callout">
+  <h3 class="nhsuk-warning-callout__label">
+    <span role="text">
+      <span class="nhsuk-u-visually-hidden">Important: </span>
+      You'll be assessed on this
+    </span>
+  </h3>
+   <p>Central Digital and Data Office (CDDO) and DfE service assessments will ensure that you have met the following Service Standard points: </p>
+   <ul class="nhsuk-list">
+   <li><a href="/standards/service-standard/5">Point 5 - Make sure everyone can use the service</a></li>
+</ul>
+</div>
+
+{% endblock %}
+
 {% block bodyContent %}
+
+
 
 {% markdown %}
 
-## To meet point 5 of the Service Standard
-
-User researchers must:
+## To meet the Service Standard user researchers must:
 
 - consider how people will use the service with assistive technology such as
  <a href="https://www.gov.uk/service-manual/technology/testing-with-assistive-technologies" target="_blank" rel="noopner noreferrer">screen readers, speech recognition software and magnifiers (opens in new tab)</a> 
 - research with participants with access needs to be aware of the types of users you may need to test with in alpha
 - not rely solely on external accessibility audits, for example <a href="https://digitalaccessibilitycentre.org/" target="_blank" rel="noopner noreferrer">Digital Accessibility Centre (DAC) (opens in new tab)</a> audits 
-- demonstrate a good sample of users from realistic user groups
+- demonstrate a good sample of users from people who are representative users of the service
 - engage stakeholders early on and advocate for designing an accessible service in future phases
 
-### How you'll be assessed on this
+## Things to consider
 
-At a discovery assessment assessors will look for:
+It's good practice to consider how you'll meet this standard, even if the service you are working on is not being assessed.
 
-- enough research with target users has been carried out
+If your service is being assessed, assessors will look for:
+
+- whether enough research with target users has been carried out
 - decisions made on research observations and user needs
 - the team's understanding of accessibility and assisted digital needs
 - how the team plans to recruit participants with access needs to test any prototypes in alpha
