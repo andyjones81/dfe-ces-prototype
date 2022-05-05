@@ -365,3 +365,12 @@ h1+.nhsuk-lede-text {
 .nhsuk-warning-callout__label{top: -48px; margin: 0 0 8px -42px;}
 .nhsuk-warning-callout p{margin-top: -20px;}
 
+.nhsuk-image__img{@include nhsuk-responsive-margin(2, "bottom");}
+
+
+
+.app-example--content > p {
+  @include nhsuk-typography-responsive(16);
+}
+
+.nhsuk-image__img--border{border: 1px solid #6F777B;}

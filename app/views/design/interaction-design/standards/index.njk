@@ -14,11 +14,11 @@
 
 {% block bodyContent %}
 
-{% markdown %}
+  {% markdown %}
 
 When designing components, patterns or features for a service, you should be ensuring you are meeting the following Web Content Accessibility Guidelines (WCAG) requirements as a minimum.
 
-- [There is sufficient contrast between foreground and background](#provide-sufficient-contrast-between-foreground-and-background)
+- [](#provide-sufficient-contrast-between-foreground-and-background)
 - [That color alone is not used to convey information](#dont-use-color-alone-to-convey-information)
 - [Interactive elements are easy to identify]()
 - [Navigation options are clear and consistent across the service]()
@@ -29,43 +29,68 @@ When designing components, patterns or features for a service, you should be ens
 - [Images and media contain alternative descriptions]()
 - [Controls for content that starts automatically are provided]()
 
-## Provide sufficient contrast between foreground and background
+{{ contentsList({
+  items: [
+    {
+      href: "#ensure-sufficient-contrast-between-foreground-and-background",
+      text: "Ensure sufficient contrast between foreground and background"
+    },
+    {
+      href: "#that-color-alone-is-not-used-to-convey-information",
+      text: "That color alone is not used to convey information"
+    }
+  ]
+}) }}
 
-Foreground text needs to have sufficient contrast with background colors. This includes text on images, background gradients, buttons, and other elements. 
+## Ensure sufficient contrast between foreground and background
+
+Text and components, like buttons, must have contrast ratios that meet <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 1.4.3 - Contrast (Minimum)</a> of the Web Content Accessibility Guidelines (WCAG 2.1). 
 
 This does not apply for logos or text that is in a photograph. 
 
-You should meet a minimum contrast ratio of 4.5:1
+This helps people who may not be able to distinguish color (color blindness) or have poor or low vision.
 
-### Guidance for meeting this standard
+The contrast ratio should be at least:
 
-<a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">WCAG 1.4.3 - Contrast (Minimum) Level - AA</a>
+- 4.5:1 for text smaller than 24px, or 19px if bold
+- 3:1 for text larger than 24px, or 19px if bold and components (like a text input field or button) and graphic elements (like an icon)
+
+<div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <img src="/assets/contrast-ratio-example.png" class="nhsuk-image__img nhsuk-image__img--border"  alt="Screenshot showing an example of good contrast ratio"/>
+ </div>
 
 ### Tools you can use
 
-<a href="https://contrast-checker.glitch.me/" target="_blank">Contrast checker</a>
+<a href="  https://contrast-grid.eightshapes.com/" target="_blank">Contrast Grid</a> - tool for checking a wide range of color combinations against Levels AA and AAA
 
-<a href="https://microsoftedge.microsoft.com/addons/detail/colour-contrast-checker/jkmnghgbaaoohmjdblniohhjnpjmnand" target="_blank">Colour Contrast Checker Edge plugin</a>
+<a href="https://contrast-checker.glitch.me/" target="_blank">Color contrast checker</a> - Built by designers from within Government.
 
- {% include "includes/_back-to-top.njk" %}
+  <a href="https://microsoftedge.microsoft.com/addons/detail/colour-contrast-checker/jkmnghgbaaoohmjdblniohhjnpjmnand" target="_blank">Colour Contrast Checker</a> -  Edge plugin to check web pages from within the browser.
 
-## Don’t use color alone to convey information
+  {% include "includes/_back-to-top.njk" %}
 
-Color can be useful to indicate statuses or other information to users. However, color alone should not be the only way information is conveyed as people who are colorblind may perceive the ifnormation differently.
+## That color alone is not used to convey information
+
+Color can be useful to indicate statuses or other information to users. However, color alone should not be the only way information is conveyed as people who are colorblind may perceive the information differently. 
+
+This is a requirement of <a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">WCAG 1.4.1 - Use of color - Level A</a>.
 
 When using color to differentiate elements, also provide additional information that does not rely on color perception. For example, use an asterisk or text in addition to color to indicate required form fields, and use labels to distinguish areas on graphs.
 
 You must also ensure when using text on colored backgrounds, you are meeting [minimum contrast ratios](#provide-sufficient-contrast-between-foreground-and-background).
 
-### Guidance for meeting this standard
+<div class="app-example app-example--content">
+    <strong class="nhsuk-tag app-example__heading">Example</strong>
+    <img src="/assets/color.png" class="nhsuk-image__img nhsuk-image__img--border"  alt="Screenshot showing an example of good contrast ratio"/>
+ </div>
 
-<a href="https://www.w3.org/WAI/WCAG21/Understanding/use-of-color" target="_blank">WCAG 1.4.1 - Use of color - Level A</a>
 
 ### Tools you can use
 
 <a href="https://www.toptal.com/designers/colorfilter" target="_blank">Color blindness webpage checker</a>
 
- {% include "includes/_back-to-top.njk" %}
+  {% include "includes/_back-to-top.njk" %}
 
 ## Interactive elements are easy to identify
 
@@ -99,5 +124,5 @@ You must also ensure when using text on colored backgrounds, you are meeting [mi
 
  {% include "includes/_back-to-top.njk" %}
 
-{% endmarkdown %}
+  {% endmarkdown %}
 {% endblock %}
